@@ -1,0 +1,388 @@
+@charset "UTF-8";
+html {
+    scroll-behavior: smooth;
+  }
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+.public-footer{
+    border-top: solid 1px gainsboro;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cherry Swash', cursive;
+ }
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-menu li:hover img{
+    opacity: 0.5;
+}
+
+/*------------------------------------------------menu　start------------------------------------------------*/
+.menu {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    color: black;
+}
+.menu:hover, .menu:focus {
+    transform: translateY(49px);
+    animation-timing-function: 1s ease-in;
+}
+.icon li:hover img{
+    opacity: 0.5;
+}
+
+.menu li a:hover {
+    color: #aaa;
+}
+.menu-text{ 
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: white;
+    font-family: 'Cherry Swash', cursive;
+    font-size: 1.5rem;
+}
+.menu-text ul{
+    list-style: none;
+    display: flex;  
+    align-items: center;    
+}
+.nav{
+    background-color: white;
+}
+.nav ul{
+    display: flex;
+}
+.nav li{
+    padding-left: 50px;
+}
+.icon li{
+    padding-top: 5px;
+    padding-right: 30px;
+}
+.title,.title-black p{
+    width: 100%;
+    position: absolute;
+    padding-top: 25px;
+    font-weight: 800;
+    font-size: 3.5rem;
+    font-family: 'Sacramento', cursive;
+    text-align:center;
+    text-decoration: underline dotted;
+    text-shadow: 1px;
+}
+.title-menu,.title-menu-black{
+    text-align:center;
+    font-family: 'Sacramento', cursive;
+    margin-top: 65px;
+    font-size: 2.5rem;
+}
+.title,.title-menu p{
+    color: snow;
+}
+.title-black,.title-menu-black p{
+    color: black;
+}
+/*------------------------------------------------menu　end------------------------------------------------*/
+
+
+
+/*------------------------------------------------home start------------------------------------------------*/
+.home{
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 100vh;
+}
+.home,.home-news-images,.home-news-bg{
+    /* position:sticky; */
+    top:0;
+}
+.home-news-bg{
+    position:sticky;
+}
+.home-news-images{
+    position:sticky;
+    display: flex;   
+    background-color: black; 
+}
+.home-news-images img{
+    width: 100%;
+}
+.image1{
+    margin-top: 70px;
+}
+.image2{
+    margin-top: 200px;
+}
+.image3{
+    margin-top: 300px;
+}
+#keyvisual {
+    height: 110vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+#keyvisual h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    border-bottom: dotted 3px snow;
+    font-family: 'Cherry Swash', cursive;
+  }
+.home-music {
+    position: sticky;
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateX(150px);
+    transition: all 1s;
+  }
+.home-music.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(100px);
+  }  
+  .home-video {
+    position: sticky;
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateX(-150px);
+    transition: all 1s;
+ }
+.home-video.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}  
+/*------------------------------------------------home　end------------------------------------------------*/ 
+
+
+
+/*------------------------------------------------list start------------------------------------------------*/
+.list nav {
+	position: fixed;
+	z-index: 1000;
+	bottom:45%;
+	font-size: 40px;
+    color: snow;
+}
+.list a {
+	border: none;
+}
+.list nav {
+	right:0;
+	border-radius: 0 10px 0 0;
+}
+.list nav a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	text-align: center;
+	transition: 0.25s;
+    text-decoration: none;
+    color: inherit;
+}
+.list li:hover{
+    font-size:50px;
+}
+.list p{
+    font-size: 20px;
+    font-family: 'Sacramento', cursive;
+    transform: rotate(90deg);
+    margin-bottom: 50px;
+}
+.tooltip { /* 補足説明するテキストのスタイル */
+    position: relative;
+    cursor: pointer;
+    padding: 0 5px;
+}  
+.description_left { /* ツールチップのスタイル */
+    width: 40px; /* 横幅 */
+    position: absolute;
+    top: 45%;
+    right: 80%; /* X軸の位置 */
+    transform: translateY(-50%);
+    padding: 8px;
+    border-radius: 10px; /* 角の丸み */
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    visibility: hidden; /* ツールチップを非表示に */
+    opacity: 0; /* 不透明度を0％に */
+    z-index: 1;
+    transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+    font-family: 'Cherry Swash', cursive;
+}
+.tooltip:hover .description_left { /* マウスオーバー時のスタイル */
+    right: 100%; /* X軸の位置 */
+    visibility: visible; /* ツールチップを表示 */
+    opacity: 1; /* 不透明度を100％に */
+}
+/*------------------------------------------------list end------------------------------------------------*/
+
+
+
+/*------------------------------------------------music start------------------------------------------------*/
+.music{
+    padding-top: 25px;
+    font-family: 'Cherry Swash', cursive;
+}
+.album-group1,.album-group2{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.album1,.album2,.album3{
+    width: 400px; /* 画像の幅調整 */
+    height: 400px;
+    box-shadow: 10px 5px 5px black;
+} 
+.album4,.album5,.album6,.album7{
+    width: 300px; /* 画像の幅調整 */
+    height: 300px;
+    box-shadow: 10px 5px 5px black;
+}  
+.album1 .circumscribed-photo-box {
+    padding-top: 100%; /* 画像の高さ調整 */
+    background: url(../images/Happier\ Than\ Ever.jpg) no-repeat center center; /* 画像のURLを指定 */
+    background-size: cover;
+}   
+.album2 .circumscribed-photo-box {
+    padding-top: 100%; /* 画像の高さ調整 */
+    background: url(../images/When\ We\ All\ Fall\ Asleep\,\ Where\ Do\ We\ Go.jpg) no-repeat center center; /* 画像のURLを指定 */
+    background-size: cover;
+}   
+.album3 .circumscribed-photo-box {
+    padding-top: 100%; /* 画像の高さ調整 */
+    background: url(../images/dont\ smile\ at\ me.jpg) no-repeat center center; /* 画像のURLを指定 */
+    background-size: cover;
+} 
+.album4 .circumscribed-photo-box {
+    padding-top: 100%; /* 画像の高さ調整 */
+    background: url(../images/Guitar-Songs.jpg) no-repeat center center; /* 画像のURLを指定 */
+    background-size: cover;
+}  
+.album5 .circumscribed-photo-box {
+    padding-top: 100%; /* 画像の高さ調整 */
+    background: url(../images/Prime\ Day\ Show.jpg) no-repeat center center; /* 画像のURLを指定 */
+    background-size: cover;
+}  
+.album6 .circumscribed-photo-box {
+    padding-top: 100%; /* 画像の高さ調整 */
+    background: url(../images/Live\ at\ Third\ Man\ Records.jpg) no-repeat center center; /* 画像のURLを指定 */
+    background-size: cover;
+}  
+.album7 .circumscribed-photo-box {
+    padding-top: 100%; /* 画像の高さ調整 */
+    background: url(../images/Up\ Next\ Session.png) no-repeat center center; /* 画像のURLを指定 */
+    background-size: cover;
+}  
+.circumscribed-photo-box-hidden {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}   
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 100%; /* 画像の高さ調整をした場合は、こちらも同じ値に変更 */
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}   
+.mask-text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: -100%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    transition: all 0.5s ease;
+}   
+.mouse-over-mask {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+}  
+.album:hover .mouse-over-mask {
+    opacity: 1;
+}  
+.album:hover .mask-text {
+    left: 0;
+}
+/*------------------------------------------------music end------------------------------------------------*/
+
+
+
+/*------------------------------------------------videos start------------------------------------------------*/
+.kadomaru{
+    border-radius:50px;   
+}
+.videos{
+    padding-top: 100px;
+}
+.cm1{   
+    text-align: center;
+    margin-bottom: 100px;
+}
+.cm2{
+    display: flex;
+    justify-content:space-evenly;
+    margin-bottom: 50px;
+}
+/*------------------------------------------------videos end------------------------------------------------*/
+
+
+
+/*------------------------------------------------news start------------------------------------------------*/
+
+.ins-group1,.ins-group2{
+    display: flex;
+    justify-content: space-around;
+}
+.ins1{
+    margin-top: 100px;
+}
+.ins2{
+    margin-top: 200px;
+}
+.ins3{
+    margin-top: 300px;
+}
+.ins4{
+    margin-top: 400px;
+}
+.ins5,.ins6{
+    width:100%;
+}
+/*------------------------------------------------news end------------------------------------------------*/

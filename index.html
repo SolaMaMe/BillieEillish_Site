@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="css/reset-min.css">
+ <link rel="stylesheet" href="css/style.css">
+
+ <!--menu-text font start-->
+ <link href="https://fonts.googleapis.com/css?family=Cherry+Swash:700 rel="stylesheet">
+ <!--menu-text font end-->
+
+ <!--title font start-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500&family=Sacramento&display=swap" rel="stylesheet">
+ <!--title font end-->
+
+ <!--scroll start-->
+ <script type='text/javascript'>
+    function scroll_effect() {
+      var element = document.getElementsByClassName('home-music');
+      if(!element) return;
+                          
+      var scrollY = window.pageYOffset;
+      var windowH = window.innerHeight;
+      var showTiming = 500; // 要素を表示するタイミング
+      for(var i = 0; i < element.length; i++) { 
+        var elemClientRect = element[i].getBoundingClientRect(); 
+        var elemY = scrollY + elemClientRect.top; 
+        if(scrollY > elemY - windowH + showTiming) {
+          element[i].classList.add('is-show');
+        }
+      }
+    }
+    window.addEventListener('scroll', scroll_effect); // スクロール時に実行
+</script>
+<script type='text/javascript'>
+    function scroll_effect() {
+      var element = document.getElementsByClassName('home-video');
+      if(!element) return;
+                          
+      var scrollY = window.pageYOffset;
+      var windowH = window.innerHeight;
+      var showTiming = 500; // 要素を表示するタイミング
+      for(var i = 0; i < element.length; i++) { 
+        var elemClientRect = element[i].getBoundingClientRect(); 
+        var elemY = scrollY + elemClientRect.top; 
+        if(scrollY > elemY - windowH + showTiming) {
+          element[i].classList.add('is-show');
+        }
+      }
+    }
+    window.addEventListener('scroll', scroll_effect); // スクロール時に実行
+</script>
+ <!--scroll end-->
+
+ <title>Billie Eilish</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="menu-text">
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="music.html">MUSIC</a></li>
+                        <li><a href="videos.html">VIDEOS</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <ul>
+                        <li><a href="https://www.youtube.com/billieeilish" target="_blank"><img src="images/youtube-line.png" alt=""></a></li>
+                        <li><a href="https://www.instagram.com/billieeilish/" target="_blank"><img src="images/instagram-line.png" alt=""></a></li>
+                        <li><a href="https://twitter.com/billieeilish" target="_blank"><img src="images/twitter-line.png" alt=""></a></li>
+                        <li><a href="https://www.facebook.com/billieeilish" target="_blank"><img src="images/facebook-circle-line.png" alt=""></a></li>
+                        <li><a href="https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH" target="_blank"><img src="images/spotify-line.png" alt=""></a></li>
+                        <li><a href="https://music.apple.com/us/artist/billie-eilish/1065981054" target="_blank"><img src="images/music-2-line.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="title">
+                <p>Billie  Eilish</p>
+            </div>
+            <div class="title-menu">
+                <p>menu</p>
+            </div>
+        </div>
+        <div class="list">
+            <nav>
+                <ul id="page-link">
+                    <li><p>Billie Eilish</p></li>
+                    <li><a href="#area-1"><span class="tooltip">・<span class="description_left">HOME</span></span></a></li>
+                    <li><a href="#area-2"><span class="tooltip">・<span class="description_left">NEWS</span></span></a></li>
+                    <li><a href="#area-3"><span class="tooltip">・<span class="description_left">MUSIC</span></span></a></li>
+                    <li><a href="#area-4"><span class="tooltip">・<span class="description_left">VIDEOS</span></span></a></li>
+                </ul>
+		    </nav>
+        </div>
+    </header>
+    <main class="conetnts">
+        <div class="home" id="area-1">
+            <video width="100%" src="videos/home.mp4" loop autoplay muted></video>
+            <audio loop autoplay id="audio">
+                <source src="videos/home.mp3">
+            </audio>
+            <script src="js/auto.js"></script> 
+        </div> 
+        <div class="home-news-images" >
+            <div class="image1"><img src="images/news-1.jpg" alt=""></div>
+            <div class="image2"><img src="images/news-2.jpg" alt=""></div>
+            <div class="image3"><img src="images/news-3.jpg" alt=""></div>
+        </div>
+        <div class="home-news-bg" id="area-2">
+            <section id="keyvisual" style="background-image: url(images/home-bg.jpg)">
+            <h1><a href="news.html">>NEWS</a></h1>
+            </section>  
+        </div>
+        <div class="home-music"  id="area-3">
+            <section id="keyvisual" style="background-image: url(images/music.jpg)">
+                <h1><a href="music.html">>MUSIC</a></h1>
+            </section>
+        </div> 
+        <div class="home-video"  id="area-4">
+            <section id="keyvisual" style="background-image: url(images/home-video.jpg)">
+                <h1><a href="videos.html">>VIDEOS</a></h1>
+            </section>
+        </div>   
+
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+    </main>
+    <footer class="public-footer">
+        <ul class="footer-menu">
+            <li><a href="https://www.youtube.com/billieeilish" target="_blank"><img src="images/youtube-line.png" alt=""></a></li>
+            <li><a href="https://www.instagram.com/billieeilish/" target="_blank"><img src="images/instagram-line.png" alt=""></a></li>
+            <li><a href="https://twitter.com/billieeilish" target="_blank"><img src="images/twitter-line.png" alt=""></a></li>
+            <li><a href="https://www.facebook.com/billieeilish" target="_blank"><img src="images/facebook-circle-line.png" alt=""></a></li>
+            <li><a href="https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH" target="_blank"><img src="images/spotify-line.png" alt=""></a></li>
+            <li><a href="https://music.apple.com/us/artist/billie-eilish/1065981054" target="_blank"><img src="images/music-2-line.png" alt=""></a></li>
+        </ul>
+        <p class="copyright">Copyright &copy; 2022 Billie Eilish All Rights Reserved</p>
+    </footer>
+</body>
+</html> 
